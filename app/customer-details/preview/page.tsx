@@ -1,4 +1,4 @@
-import PreviewCustomerDetails from './components/PreviewComponent'; './components/PreviewComponent';
+import PreviewCustomerDetails from './components/PreviewComponent';
 import { Suspense } from 'react';
 
 export default function Page() {
