@@ -85,11 +85,11 @@ export default function FieldServiceReport() {
 
   const filteredEngines = engines.filter(engine => {
     const matchesSearch = searchTerm === '' || 
-      engine.engine_model.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      engine.engine_serial_number.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      engine.customer_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      engine.employee_serial_number.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (engine.employee_serial_alias && engine.employee_serial_alias.toLowerCase().includes(searchTerm.toLowerCase()));
+      engine.engine_model?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+      engine.engine_serial_number?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+      engine.customer_name?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+      engine.employee_serial_number?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+      (engine.employee_serial_alias && engine.employee_serial_alias?.toLowerCase().includes(searchTerm?.toLowerCase()));
 
     const matchesDate = !selectedDate || 
       new Date(engine.date_of_fill).toDateString() === selectedDate.toDateString();
